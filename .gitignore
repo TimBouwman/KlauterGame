@@ -58,3 +58,5 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+Assets/ThreeDPoseUnityBarracuda/Scripts/Model/Resnet34_3inputs_448x448_20200212.onnx.meta
+Assets/ThreeDPoseUnityBarracuda/Scripts/Model/Resnet34_3inputs_448x448_20200212.onnx
