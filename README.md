@@ -19,3 +19,4 @@ _Een visueele representatie van ons concept._
 Dit zijn links naar onze documentatie:
 
  * [Trello](https://trello.com/b/3TJg7tu1/klauter-game)
+ * [Packet list](https://docs.google.com/spreadsheets/d/1sO6xQE3OJJMnTjGyyGFFbH32yej5ryA2hlKZ6-13m8c/edit?usp=sharing)
