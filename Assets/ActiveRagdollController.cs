@@ -5,14 +5,22 @@ using UnityEngine;
 public class ActiveRagdollController : MonoBehaviour
 {
     [SerializeField] private AppendagePositionReader positionReader;
-    [SerializeField] private Transform[] appendageIndexes;
+    [SerializeField] private Rigidbody hips;
+    [SerializeField] private ConfigurableJoint[] joints;
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        for (int i = 0; i < appendageIndexes.Length; i++)
+        hips.transform.rotation = positionReader.HipsRotation;
+
+        for (int i = 0; i < joints.Length; i++)
         {
-            appendageIndexes[i].localPosition = positionReader.AppendagePositions[i];
+            float x = positionReader.AppendagePositions[i].x;
+            float y = positionReader.AppendagePositions[i].y;
+            float z = positionReader.AppendagePositions[i].z;
+            Vector3 pos = new Vector3(x, z, y);
+
+            joints[i].targetPosition = pos;
         }
     }
 }
