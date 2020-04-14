@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ActiveRagdollController : MonoBehaviour
 {
-    [SerializeField] private AppendagePositionReader positionReader;
+    //[SerializeField] private AppendagePositionReader positionReader;
     [SerializeField] private Rigidbody hips;
     [SerializeField] private ConfigurableJoint[] joints;
 
@@ -13,12 +13,12 @@ public class ActiveRagdollController : MonoBehaviour
     {
         for (int i = 0; i < joints.Length; i++)
         {
-            float x = positionReader.AppendagePositions[i].x;
-            float y = positionReader.AppendagePositions[i].y;
-            float z = positionReader.AppendagePositions[i].z;
-            Vector3 pos = new Vector3(x, y, z);
+            //float x = positionReader.AppendagePositions[i].x;
+            //float y = positionReader.AppendagePositions[i].y;
+            //float z = positionReader.AppendagePositions[i].z;
+            //Vector3 pos = new Vector3(x, y, z);
 
-            joints[i].targetPosition = pos;
+            //joints[i].targetPosition = pos;
         }
     }
 }
