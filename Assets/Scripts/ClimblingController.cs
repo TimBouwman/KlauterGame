@@ -6,22 +6,23 @@ using UnityEngine;
 public class ClimblingController : MonoBehaviour
 {
     [SerializeField] private Rigidbody body, rightHand, leftHand;
-    [SerializeField] private float radius;
-    [SerializeField] private LayerMask layer;
     public static Action<Rigidbody> onGrab;
 
     // Start is called before the first frame update
     private void Awake()
     {
         body.isKinematic = true;
-        Hand.onGrab += (hand) => Grab(hand);
+        Hand.onGrab += (name, hand) => Grab(name, hand);
     }
 
-    private void Grab(Rigidbody hand)
+    private void Grab(string name, Rigidbody hand)
     {
-        body.isKinematic = false;
-        hand.isKinematic = true;
-        if (hand != rightHand) rightHand.isKinematic = false;
-        else leftHand.isKinematic = false;
+        if (name == this.transform.name)
+        {
+            body.isKinematic = false;
+            hand.isKinematic = true;
+            if (hand != rightHand) rightHand.isKinematic = false;
+            else leftHand.isKinematic = false;
+        }
     }
 }

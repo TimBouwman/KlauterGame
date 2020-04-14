@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+[RequireComponent(typeof(Collider))]
 public class Finish : MonoBehaviour
 {
     [SerializeField] private ParticleSystem particle;
@@ -25,6 +26,11 @@ public class Finish : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// This slows down time, plays a particle effect and starts a count down to reload the game.
+    /// </summary>
+    /// <param name="pos">The location where the particle effect is played.</param>
+    /// <returns></returns>
     private IEnumerator WinEffects(Vector3 pos)
     {
         Time.timeScale = slowDownFector;
