@@ -42,7 +42,7 @@ class Server {
                 QuitPacketHandler(server, socket);
             });
 
-            socket.on('move', function(data) {
+            socket.on('appendagePositionUpdate', function(data) {
                 MovePacketHandler(server, data);
             });
 

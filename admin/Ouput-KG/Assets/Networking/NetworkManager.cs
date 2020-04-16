@@ -12,6 +12,7 @@ public class NetworkManager : MonoBehaviour {
     [SerializeField] private MeshRenderer cameraInput;
     [SerializeField] private Filter qRFilter;
     [SerializeField] private GameObject toEnableForQRConversion;
+    [SerializeField] private ActiveRagdollController ragdollController;
 
     private ArrayList players = new ArrayList();
     private bool joined = false;
@@ -24,6 +25,7 @@ public class NetworkManager : MonoBehaviour {
         socket.On("connect", OnConnection);
         socket.On("colorUpdate", HandleQRColorUpdate);
         socket.On("mapUpdate", ReceiveMapImage);
+        socket.On("appendagePositionUpdate", OnAppendagePositionUpdate);
     }
 
     private void OnConnection(SocketIO.SocketIOEvent e) {
@@ -33,6 +35,15 @@ public class NetworkManager : MonoBehaviour {
 
             socket.Emit("join", new JSONObject(data));
         }
+    }
+
+    private void OnAppendagePositionUpdate(SocketIO.SocketIOEvent e) {
+        string eventAsString = "" + e.data;
+        Dictionary<string, string> data = JsonConvert.DeserializeObject<Dictionary<string, string>>(eventAsString);
+
+        Vector3 pos = new Vector3(float.Parse(data["x"]), float.Parse(data["y"]), float.Parse(data["z"]));
+
+        ragdollController.UpdateApandages(int.Parse(data["id"]), pos);
     }
 
     private void ReceiveMapImage(SocketIO.SocketIOEvent e) {

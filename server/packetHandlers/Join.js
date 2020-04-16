@@ -17,11 +17,11 @@ function HandleJoinPacket(server, socket, data) {
     switch(data.connectionType) {
 
         case ConnectionType.PLAYER: {
-            if(!server.isJoinable)
+            //if(!server.isJoinable)
                 //TODO send a packet where we inform the user about the server's setup.
-                return;
+               // return;
 
-            var newPlayer = new Player(socket.id, data.playerTypeId, data.x, data.y, data.z);
+            var newPlayer = new Player(socket.id);
             server.connectedPlayers.push(newPlayer);
         
             //We need to send the new player all the other players! Otherwise he will be alone forever!!

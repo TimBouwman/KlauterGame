@@ -1,8 +1,12 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - ActiveRagdollController
+    - ClimblingController
     - EnterIP
     - Filter
+    - Finish
+    - Hand
     - NetworkManager
     - QRHandler
     - QRSkeleton
@@ -15,6 +19,7 @@ ScriptsOnlyBuild:
     - TMPro.TMP_Settings
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
+    - TMPro.TextMeshProUGUI
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -48,7 +53,11 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 49
       Script: {instanceID: 0}
+    - Class: 54
+      Script: {instanceID: 0}
     - Class: 64
+      Script: {instanceID: 0}
+    - Class: 65
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
@@ -61,50 +70,76 @@ ScriptsOnlyBuild:
     - Class: 109
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9698}
+      Script: {instanceID: 9712}
     - Class: 114
-      Script: {instanceID: 9822}
+      Script: {instanceID: 9804}
     - Class: 114
-      Script: {instanceID: 9866}
+      Script: {instanceID: 9840}
     - Class: 114
-      Script: {instanceID: 9892}
+      Script: {instanceID: 9884}
     - Class: 114
-      Script: {instanceID: 9914}
+      Script: {instanceID: 9910}
     - Class: 114
-      Script: {instanceID: 10226}
+      Script: {instanceID: 9932}
     - Class: 114
-      Script: {instanceID: 10312}
+      Script: {instanceID: 10158}
+    - Class: 114
+      Script: {instanceID: 10248}
     - Class: 114
       Script: {instanceID: 10334}
     - Class: 114
-      Script: {instanceID: 10506}
+      Script: {instanceID: 10356}
     - Class: 114
-      Script: {instanceID: 10602}
+      Script: {instanceID: 10526}
     - Class: 114
-      Script: {instanceID: 10874}
+      Script: {instanceID: 10622}
     - Class: 114
-      Script: {instanceID: 10902}
+      Script: {instanceID: 10658}
     - Class: 114
-      Script: {instanceID: 10934}
+      Script: {instanceID: 10896}
     - Class: 114
-      Script: {instanceID: 10948}
+      Script: {instanceID: 10924}
     - Class: 114
-      Script: {instanceID: 11014}
+      Script: {instanceID: 10956}
     - Class: 114
-      Script: {instanceID: 11218}
+      Script: {instanceID: 10970}
     - Class: 114
-      Script: {instanceID: 11396}
+      Script: {instanceID: 11036}
     - Class: 114
-      Script: {instanceID: 11504}
+      Script: {instanceID: 11112}
     - Class: 114
-      Script: {instanceID: 11518}
+      Script: {instanceID: 11178}
     - Class: 114
-      Script: {instanceID: 11622}
+      Script: {instanceID: 11244}
+    - Class: 114
+      Script: {instanceID: 11422}
+    - Class: 114
+      Script: {instanceID: 11530}
+    - Class: 114
+      Script: {instanceID: 11544}
+    - Class: 114
+      Script: {instanceID: 11648}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
       Script: {instanceID: 0}
+    - Class: 134
+      Script: {instanceID: 0}
+    - Class: 135
+      Script: {instanceID: 0}
+    - Class: 136
+      Script: {instanceID: 0}
+    - Class: 138
+      Script: {instanceID: 0}
+    - Class: 153
+      Script: {instanceID: 0}
     - Class: 157
+      Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
+      Script: {instanceID: 0}
+    - Class: 205
       Script: {instanceID: 0}
     - Class: 212
       Script: {instanceID: 0}
@@ -143,6 +178,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_Dropdown
+  - hash:
+      serializedVersion: 2
+      Hash: 5a57771ba01d5b842e70234a9c7ade7e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Hand
   - hash:
       serializedVersion: 2
       Hash: e7a73f5f78ba6445195ec23b74a1ce2d
@@ -275,6 +316,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SubMeshUI
+  - hash:
+      serializedVersion: 2
+      Hash: e693421d1b5a30cb92dcaab52efb0c13
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Finish
   - hash:
       serializedVersion: 2
       Hash: 5ab533713adae59372fb3e10a585c186
@@ -415,6 +462,12 @@ ScriptsOnlyBuild:
     className: RemoteTestResultSender
   - hash:
       serializedVersion: 2
+      Hash: b4aca2d01706ac98f26ee57769a81523
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ClimblingController
+  - hash:
+      serializedVersion: 2
       Hash: 4fd8bf02e3089425d3502e26c44ba31a
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -529,7 +582,7 @@ ScriptsOnlyBuild:
     className: TMP_TextSelector_A
   - hash:
       serializedVersion: 2
-      Hash: c2e74839da2b13a7d816604e50b1307f
+      Hash: 85a77e06b51d5b5824f6b5c3a02c4c10
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: NetworkManager
@@ -551,6 +604,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: TMPro.Examples
     className: TMP_TextInfoDebugTool
+  - hash:
+      serializedVersion: 2
+      Hash: 39970772ccd477221954fe3237e0c5b9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ActiveRagdollController
   - hash:
       serializedVersion: 2
       Hash: bd3f0ca738703903e759f77536ed74fd

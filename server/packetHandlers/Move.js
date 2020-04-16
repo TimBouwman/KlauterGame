@@ -1,14 +1,11 @@
 function HandleMovePacket(server, data) {
     server.connectedPlayers.forEach(player => {
-        if(player.clientId == data.clientId){
-            player.x = parseFloat(data.x);
-            player.y = parseFloat(data.y);
-            player.rotZ = parseFloat(data.rotZ);
-            player.rotY = parseFloat(data.rotY);
-        }
+        player.appandages[parseInt(data.id)].x = parseFloat(data.x);
+        player.appandages[parseInt(data.id)].y = parseFloat(data.y);
+        player.appandages[parseInt(data.id)].z = parseFloat(data.z);
     });
 
-    server.BroadCastToClients('move', data);
+    server.BroadCastToClients('appendagePositionUpdate', data);
 }
 
 module.exports = HandleMovePacket;
