@@ -48,7 +48,7 @@ Door deze speciale QR-codes op de muur te plakken kunnen wij dus gemakkelijk een
 
 ![Game concept](http://maclout.com/klautergame/gameconcept/QRToMap.png)
 
-_QR => 3DMap Systeem door Stanley Dam_
+_QR => 3DMap Systeem_
 
 ## Scrum
 
