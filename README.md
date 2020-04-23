@@ -68,3 +68,5 @@ Dit zijn links naar onze documentatie:
  * [Game in werking en test resultaat](https://www.youtube.com/watch?v=TkWeqh1pLaA&feature=youtu.be)
  * [Trello](https://trello.com/b/3TJg7tu1/klauter-game)
  * [Packet list](https://docs.google.com/spreadsheets/d/1sO6xQE3OJJMnTjGyyGFFbH32yej5ryA2hlKZ6-13m8c/edit?usp=sharing)
+ * [UML klauteren](https://drive.google.com/file/d/1PVFvf3T2wt3uagGqlsGT97n02i28L8Y6/view?usp=sharing)
+ * [Presentatie](https://drive.google.com/file/d/15PSQmLj_IQ_tqquH3V5NaZa9fdb6LysF/view?usp=sharing)
